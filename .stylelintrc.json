@@ -1,0 +1,28 @@
+{
+  "files": ["*.css"],
+  "extends": ["stylelint-config-standard", "stylelint-config-clean-order"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "selector-class-pattern": [
+      "^[a-z][a-zA-Z0-9]+$",
+      {
+        "message": "Class Name should be in camelCase",
+        "severity": "error"
+      }
+    ],
+    "selector-max-id": [
+      0,
+      {
+        "message": "You are not allowed to use Ids as selectors",
+        "severity": "error"
+      }
+    ],
+    "unit-allowed-list": ["%", "px", "deg", "rem", "ms", "vh", "fr", "ch", "vw"],
+    "block-no-empty": true,
+    "order/order": [
+			"custom-properties",
+			"declarations"
+		]
+  },
+  "defaultSeverity": "warning"
+}
