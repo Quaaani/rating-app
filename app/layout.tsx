@@ -1,8 +1,8 @@
 import type {Metadata} from 'next'
-import {Inter} from 'next/font/google'
+import {Noto_Sans} from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({
+const inter = Noto_Sans({
   subsets: ['latin'],
 })
 

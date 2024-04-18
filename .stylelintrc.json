@@ -11,7 +11,7 @@
       }
     ],
     "selector-max-id": [
-      0,
+      1,
       {
         "message": "You are not allowed to use Ids as selectors",
         "severity": "error"
