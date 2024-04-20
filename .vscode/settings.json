@@ -1,3 +1,53 @@
 {
-  "cSpell.words": ["callout", "Parens", "stylelint", "vercel"]
+  "cSpell.words": ["callout", "Parens", "stylelint", "vercel"],
+  "folderTemplates.fileTemplates": {
+    "Component": [
+      "import {FC} from 'react'",
+      "import {<FTName | pascalcase>Props} from './<FTName>.types'",
+      "",
+      "import styles from './<FTName>.module.css'",
+      "",
+      "export const Texts: FC<<FTName | pascalcase>Props> = () => {",
+      "  return <div className={styles.root}><FTName | pascalcase> Component</div>",
+      "}",
+      ""
+    ],
+
+    "Types": [
+      "export interface <FTName | pascalcase>Props {}"
+    ],
+
+    "Styles": [
+      ".root {}"
+    ],
+
+    "Public API": [
+      "export * from './<FTName>'"
+    ]
+  },
+  "folderTemplates.structures": [
+    {
+      "name": "Create UIKit Component Structure",
+      "customVariables": [],
+      "omitParentDirectory": true,
+      "structure": [
+        {
+          "fileName": "<FTName>/<FTName>.tsx",
+          "template": "Component"
+        },
+        {
+          "fileName": "<FTName>/<FTName>.types.ts",
+          "template": "Types"
+        },
+        {
+          "fileName": "<FTName>/<FTName>.module.css",
+          "template": "Styles"
+        },
+        {
+          "fileName": "<FTName>/index.ts",
+          "template": "Public API"
+        }
+      ]
+    }
+  ]
 }

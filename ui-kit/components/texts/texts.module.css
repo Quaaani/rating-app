@@ -1,0 +1,41 @@
+.heading {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 35.41px;
+}
+
+.heading2 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 29.96px;
+}
+
+.heading3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27.24px;
+}
+
+.body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.light {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.34px;
+}
+
+.semiBold {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21.79px;
+}
+
+.bold {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.79px;
+}
