@@ -1,3 +1,9 @@
+import {UIKit} from '@ui-kit'
+
 export default function Home() {
-  return <main>Home page</main>
+  return (
+    <main>
+      <UIKit.Texts.Heading>Home Page</UIKit.Texts.Heading>
+    </main>
+  )
 }
