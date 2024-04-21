@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["callout", "Parens", "stylelint", "vercel"],
+  "cSpell.words": ["callout", "Parens", "stylelint", "svgr", "vercel"],
   "folderTemplates.fileTemplates": {
     "Component": [
       "import {FC} from 'react'",
@@ -7,23 +7,17 @@
       "",
       "import styles from './<FTName>.module.css'",
       "",
-      "export const Texts: FC<<FTName | pascalcase>Props> = () => {",
+      "export const <FTName | pascalcase>: FC<<FTName | pascalcase>Props> = () => {",
       "  return <div className={styles.root}><FTName | pascalcase> Component</div>",
       "}",
       ""
     ],
 
-    "Types": [
-      "export interface <FTName | pascalcase>Props {}"
-    ],
+    "Types": ["export interface <FTName | pascalcase>Props {}"],
 
-    "Styles": [
-      ".root {}"
-    ],
+    "Styles": [".root {}"],
 
-    "Public API": [
-      "export * from './<FTName>'"
-    ]
+    "Public API": ["export * from './<FTName>'"]
   },
   "folderTemplates.structures": [
     {
