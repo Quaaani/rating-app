@@ -1,6 +1,6 @@
-import {FC, PropsWithChildren} from 'react'
+import {DetailedHTMLProps, FC, HTMLAttributes, PropsWithChildren} from 'react'
 
-export interface TextsProps {}
+export interface TextsProps extends DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement> {}
 
 export enum TextFonts {
   Heading = 'Heading',

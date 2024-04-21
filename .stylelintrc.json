@@ -17,12 +17,8 @@
         "severity": "error"
       }
     ],
-    "unit-allowed-list": ["%", "px", "deg", "rem", "ms", "vh", "fr", "ch", "vw"],
     "block-no-empty": true,
-    "order/order": [
-			"custom-properties",
-			"declarations"
-		]
+    "order/order": ["custom-properties", "declarations"]
   },
   "defaultSeverity": "warning"
 }

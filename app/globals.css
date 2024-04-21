@@ -71,9 +71,12 @@ h6 {
 :root {
   --black: #3b434e;
   --white: white;
+  --gray-light: #ebebeb;
   --red: #fc836d;
   --green: #1dc37e;
   --green-light: #c8f8e4;
   --primary: #7653fc;
+  --primary-hover: #6344df;
   --background: #f5f6f8;
+  --background-hover: #e7e8eb;
 }
