@@ -4,15 +4,15 @@ import {ButtonProps} from './button.types'
 import ArrowIcon from '../../assets/icons/arrow.svg'
 
 import styles from './button.module.css'
-import cn from 'classnames'
+import classNames from 'classnames'
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = ({children, mode = 'primary', iconPosition}) => {
-  const buttonClassNames = cn(styles.button, {
+  const buttonClassNames = classNames(styles.button, {
     [styles.primary]: mode === 'primary',
     [styles.ghost]: mode === 'ghost',
   })
 
-  const iconClassNames = cn(styles.arrow, {
+  const iconClassNames = classNames(styles.arrow, {
     [styles.down]: iconPosition === 'down',
   })
 

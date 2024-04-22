@@ -2,7 +2,7 @@ import {TextFonts, TextsExtensions, TextsProps} from './texts.types'
 
 import styles from './texts.module.css'
 
-import cn from 'classnames'
+import classNames from 'classnames'
 
 import {PropsWithChildren} from 'react'
 import {getObjectKeys} from '@utils'
@@ -24,7 +24,7 @@ const generateTextComponents = (): TextsExtensions => {
     (acc, textFontStyleKey) => ({
       ...acc,
       [textFontStyleKey]: ({children, className, ...restProps}: PropsWithChildren<TextsProps>) => (
-        <p className={cn(className, textFontStyles[textFontStyleKey])} {...restProps}>
+        <p className={classNames(className, textFontStyles[textFontStyleKey])} {...restProps}>
           {children}
         </p>
       ),
