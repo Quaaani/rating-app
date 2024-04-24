@@ -1,0 +1,17 @@
+.base {
+  cursor: pointer;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.base svg {
+  fill: var(--gray-light);
+}
+
+.selected svg {
+  fill: var(--primary);
+}
+
+.readonly {
+  cursor: not-allowed;
+}
