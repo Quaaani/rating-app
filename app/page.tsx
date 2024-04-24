@@ -1,8 +1,13 @@
-import {UIKit} from '@ui-kit'
+'use client'
+
+import {UIKit, Widgets} from '@ui-kit'
 
 import styles from './page.module.css'
+import {useState} from 'react'
 
 export default function Home() {
+  const [rating, setRating] = useState(0)
+
   return (
     <main>
       <UIKit.Texts.Heading>Home Page</UIKit.Texts.Heading>
@@ -38,6 +43,7 @@ export default function Home() {
         primary
       </UIKit.Tag>
       <UIKit.Tag>Default</UIKit.Tag>
+      <Widgets.Rating isReadonly rating={rating} setRating={setRating} />
     </main>
   )
 }
