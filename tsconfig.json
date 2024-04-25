@@ -20,7 +20,9 @@
     "baseUrl": ".",
     "paths": {
       "@utils": ["utils/index"],
-      "@ui-kit": ["ui-kit/index"]
+      "@ui-kit": ["ui-kit/index"],
+      "@views": ["views/index"],
+      "@layouts": ["layouts/index"]
     },
     "strictPropertyInitialization": false
   },
