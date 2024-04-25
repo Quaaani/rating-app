@@ -17,7 +17,7 @@
         "severity": "error"
       }
     ],
-    "block-no-empty": true,
+    "block-no-empty": null,
     "order/order": ["custom-properties", "declarations"]
   },
   "defaultSeverity": "warning"

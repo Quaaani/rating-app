@@ -1,4 +1,5 @@
 {
+  "css.validate": false,
   "cSpell.words": ["callout", "Parens", "stylelint", "svgr", "vercel"],
   "folderTemplates.fileTemplates": {
     "Component": [
@@ -12,16 +13,66 @@
       "}",
       ""
     ],
+    "Component Types": ["export interface <FTName | pascalcase>Props {}", ""],
+    "Styles": [".root {}", ""],
+    "Component Public API": ["export * from './<FTName>'", ""],
 
-    "Types": ["export interface <FTName | pascalcase>Props {}"],
+    "View": [
+      "import {FC} from 'react'",
+      "import {<FTName | pascalcase>ViewProps} from './<FTName>-view.types'",
+      "",
+      "import styles from './<FTName>-view.module.css'",
+      "",
+      "export const <FTName | pascalcase>View: FC<<FTName | pascalcase>ViewProps> = () => {",
+      "  return <div className={styles.root}><FTName | pascalcase>View</div>",
+      "}",
+      ""
+    ],
+    "View Types": ["export interface <FTName | pascalcase>ViewProps {}", ""],
+    "View Public API": ["export * from './<FTName>-view'", ""],
 
-    "Styles": [".root {}"],
+    "Layout": [
+      "import {FC, PropsWithChildren} from 'react'",
+      "import {<FTName | pascalcase>LayoutProps} from './<FTName>-layout.types'",
+      "",
+      "import styles from './<FTName>-layout.module.css'",
+      "",
+      "export const <FTName | pascalcase>Layout: FC<PropsWithChildren<<FTName | pascalcase>LayoutProps>> = ({children}) => {",
+      "  return (",
+      "    <div className={styles.root}>",
+      "      <FTName | pascalcase>Layout",
+      "      {children}",
+      "    </div>",
+      "  )",
+      "}",
+      "",
+    ],
+    "Layout Types": ["export interface <FTName | pascalcase>LayoutProps {}", ""],
+    "Layout Public API": ["export * from './<FTName>-layout'", ""],
 
-    "Public API": ["export * from './<FTName>'"]
+    "AppRouting: Page": [
+      "import {<FTName | pascalcase>View} from '@views'",
+      "",
+      "export default <FTName | pascalcase>View",
+      "",
+    ],
+
+    "AppRouting: Layout": [
+      "import {<FTName | pascalcase>Layout} from '@layouts'",
+      "import {Metadata} from 'next'",
+      "",
+      "export const metadata: Metadata = {",
+      "  title: '<FTName | pascalcase>',",
+      "  description: '<FTName | pascalcase> Description',",
+      "}",
+      "",
+      "export default <FTName | pascalcase>Layout",
+      "",
+    ],
   },
   "folderTemplates.structures": [
     {
-      "name": "Create UIKit Component Structure",
+      "name": "Create Component",
       "customVariables": [],
       "omitParentDirectory": true,
       "structure": [
@@ -31,7 +82,7 @@
         },
         {
           "fileName": "<FTName>/<FTName>.types.ts",
-          "template": "Types"
+          "template": "Component Types"
         },
         {
           "fileName": "<FTName>/<FTName>.module.css",
@@ -39,7 +90,75 @@
         },
         {
           "fileName": "<FTName>/index.ts",
-          "template": "Public API"
+          "template": "Component Public API"
+        }
+      ]
+    },
+    {
+      "name": "Create View",
+      "customVariables": [],
+      "omitParentDirectory": true,
+      "structure": [
+        {
+          "fileName": "<FTName>-view/<FTName>-view.tsx",
+          "template": "View"
+        },
+        {
+          "fileName": "<FTName>-view/<FTName>-view.types.ts",
+          "template": "View Types"
+        },
+        {
+          "fileName": "<FTName>-view/<FTName>-view.module.css",
+          "template": "Styles"
+        },
+        {
+          "fileName": "<FTName>-view/index.ts",
+          "template": "View Public API"
+        }
+      ]
+    },
+    {
+      "name": "Create Layout",
+      "customVariables": [],
+      "omitParentDirectory": true,
+      "structure": [
+        {
+          "fileName": "<FTName>-layout/<FTName>-layout.tsx",
+          "template": "Layout"
+        },
+        {
+          "fileName": "<FTName>-layout/<FTName>-layout.types.ts",
+          "template": "Layout Types"
+        },
+        {
+          "fileName": "<FTName>-layout/<FTName>-layout.module.css",
+          "template": "Styles"
+        },
+        {
+          "fileName": "<FTName>-layout/index.ts",
+          "template": "Layout Public API"
+        }
+      ]
+    },
+    {
+      "name": "Create AppRouting: Page",
+      "customVariables": [],
+      "omitParentDirectory": true,
+      "structure": [
+        {
+          "fileName": "<FTName>/page.tsx",
+          "template": "AppRouting: Page"
+        }
+      ]
+    },
+    {
+      "name": "Create AppRouting: Layout",
+      "customVariables": [],
+      "omitParentDirectory": true,
+      "structure": [
+        {
+          "fileName": "layout.tsx",
+          "template": "AppRouting: Layout"
         }
       ]
     }

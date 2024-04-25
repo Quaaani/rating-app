@@ -2,7 +2,6 @@
 
 import {UIKit, Widgets} from '@ui-kit'
 
-import styles from './page.module.css'
 import {useState} from 'react'
 
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
       <UIKit.Button mode="ghost" iconPosition="down">
         Press me
       </UIKit.Button>
-      <UIKit.Paragraph className={styles.par} mode="large">
+      <UIKit.Paragraph mode="large">
         Напишу сразу в двух курсах, так как проходил оба. Java будет многим непросвещённым сложновата в изучении, но
         здесь перевес из-за лидирующего положения языка как самого популярного в программировании. Выбор мой пал на эту
         профессию еще и потому, что Java-разработчики получают самую большую зарплату. Хотя Python начинает догонять
