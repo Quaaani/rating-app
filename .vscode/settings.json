@@ -7,13 +7,21 @@
       "import {<FTName | pascalcase>Props} from './<FTName>.types'",
       "",
       "import styles from './<FTName>.module.css'",
+      "import classNames from 'classnames'",
       "",
-      "export const <FTName | pascalcase>: FC<<FTName | pascalcase>Props> = () => {",
-      "  return <div className={styles.root}><FTName | pascalcase> Component</div>",
+      "export const <FTName | pascalcase>: FC<<FTName | pascalcase>Props> = ({className}) => {",
+      "  const rootClassNames = classNames(className, styles.root)",
+      "",
+      "  return <div className={rootClassNames}><FTName | pascalcase> Component</div>",
       "}",
       ""
     ],
-    "Component Types": ["export interface <FTName | pascalcase>Props {}", ""],
+    "Component Types": [
+      "import {DetailedHTMLProps, HTMLAttributes} from 'react'",
+      "",
+      "export interface <FTName | pascalcase>Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}",
+      ""
+    ],
     "Styles": [".root {}", ""],
     "Component Public API": ["export * from './<FTName>'", ""],
 
@@ -22,13 +30,21 @@
       "import {<FTName | pascalcase>ViewProps} from './<FTName>-view.types'",
       "",
       "import styles from './<FTName>-view.module.css'",
+      "import classNames from 'classnames'",
       "",
-      "export const <FTName | pascalcase>View: FC<<FTName | pascalcase>ViewProps> = () => {",
-      "  return <div className={styles.root}><FTName | pascalcase>View</div>",
+      "export const <FTName | pascalcase>View: FC<<FTName | pascalcase>ViewProps> = ({className}) => {",
+      "  const rootClassNames = classNames(className, styles.root)",
+      "",
+      "  return <div className={rootClassNames}><FTName | pascalcase>View</div>",
       "}",
       ""
     ],
-    "View Types": ["export interface <FTName | pascalcase>ViewProps {}", ""],
+    "View Types": [
+      "import {DetailedHTMLProps, HTMLAttributes} from 'react'",
+      "",
+      "export interface <FTName | pascalcase>ViewProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}",
+      ""
+    ],
     "View Public API": ["export * from './<FTName>-view'", ""],
 
     "Layout": [
@@ -36,25 +52,33 @@
       "import {<FTName | pascalcase>LayoutProps} from './<FTName>-layout.types'",
       "",
       "import styles from './<FTName>-layout.module.css'",
+      "import classNames from 'classnames'",
       "",
-      "export const <FTName | pascalcase>Layout: FC<PropsWithChildren<<FTName | pascalcase>LayoutProps>> = ({children}) => {",
+      "export const <FTName | pascalcase>Layout: FC<PropsWithChildren<<FTName | pascalcase>LayoutProps>> = ({children, className}) => {",
+      "  const rootClassNames = classNames(className, styles.root)",
+      "",
       "  return (",
-      "    <div className={styles.root}>",
+      "    <div className={rootClassNames}>",
       "      <FTName | pascalcase>Layout",
       "      {children}",
       "    </div>",
       "  )",
       "}",
-      "",
+      ""
     ],
-    "Layout Types": ["export interface <FTName | pascalcase>LayoutProps {}", ""],
+    "Layout Types": [
+      "import {DetailedHTMLProps, HTMLAttributes} from 'react'",
+      "",
+      "export interface <FTName | pascalcase>LayoutProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}",
+      ""
+    ],
     "Layout Public API": ["export * from './<FTName>-layout'", ""],
 
     "AppRouting: Page": [
       "import {<FTName | pascalcase>View} from '@views'",
       "",
       "export default <FTName | pascalcase>View",
-      "",
+      ""
     ],
 
     "AppRouting: Layout": [
@@ -67,8 +91,8 @@
       "}",
       "",
       "export default <FTName | pascalcase>Layout",
-      "",
-    ],
+      ""
+    ]
   },
   "folderTemplates.structures": [
     {
@@ -162,5 +186,6 @@
         }
       ]
     }
-  ]
+  ],
+  "cSpell.language": "en,ru"
 }

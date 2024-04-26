@@ -22,7 +22,8 @@
       "@utils": ["utils/index"],
       "@ui-kit": ["ui-kit/index"],
       "@views": ["views/index"],
-      "@layouts": ["layouts/index"]
+      "@layouts": ["layouts/index"],
+      "@widgets": ["widgets/index"]
     },
     "strictPropertyInitialization": false
   },

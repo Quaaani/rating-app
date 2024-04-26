@@ -18,7 +18,13 @@
       }
     ],
     "block-no-empty": null,
-    "order/order": ["custom-properties", "declarations"]
+    "order/order": ["custom-properties", "declarations"],
+    "declaration-block-no-redundant-longhand-properties": [
+      true,
+      {
+        "ignoreShorthands": ["/grid/"]
+      }
+    ]
   },
   "defaultSeverity": "warning"
 }
