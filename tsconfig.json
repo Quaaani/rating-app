@@ -23,7 +23,10 @@
       "@ui-kit": ["ui-kit/index"],
       "@views": ["views/index"],
       "@layouts": ["layouts/index"],
-      "@widgets": ["widgets/index"]
+      "@widgets": ["widgets/index"],
+      "@api": ["api/index"],
+      "@interfaces": ["interfaces/index"],
+      "@constants": ["constants/index"]
     },
     "strictPropertyInitialization": false
   },
