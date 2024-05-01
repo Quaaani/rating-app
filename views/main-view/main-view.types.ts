@@ -1,3 +1,3 @@
-import {DetailedHTMLProps, HTMLAttributes} from 'react'
+import {ViewDefaultProps} from '@constants'
 
-export interface MainViewProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+export interface MainViewProps extends ViewDefaultProps {}

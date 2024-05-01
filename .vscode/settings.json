@@ -27,32 +27,43 @@
 
     "View": [
       "import {FC} from 'react'",
+      "import {Metadata} from 'next'",
+      "",
       "import {<FTName | pascalcase>ViewProps} from './<FTName>-view.types'",
       "",
       "import styles from './<FTName>-view.module.css'",
-      "import classNames from 'classnames'",
       "",
-      "export const <FTName | pascalcase>View: FC<<FTName | pascalcase>ViewProps> = ({className}) => {",
-      "  const rootClassNames = classNames(className, styles.root)",
+      "export const <FTName | pascalcase>ViewMetadata: Metadata = {",
+      "  title: '<FTName | pascalcase>View Title',",
+      "  description: '<FTName | pascalcase>View Description',",
+      "}",
       "",
-      "  return <div className={rootClassNames}><FTName | pascalcase>View</div>",
+      "export const <FTName | pascalcase>View: FC<<FTName | pascalcase>ViewProps> = () => {",
+      "  return <div className={styles.root}><FTName | pascalcase>View</div>",
       "}",
       ""
     ],
     "View Types": [
-      "import {DetailedHTMLProps, HTMLAttributes} from 'react'",
+      "import {ViewDefaultProps} from '@constants'",
       "",
-      "export interface <FTName | pascalcase>ViewProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}",
+      "export interface <FTName | pascalcase>ViewProps extends ViewDefaultProps {}",
       ""
     ],
     "View Public API": ["export * from './<FTName>-view'", ""],
 
     "Layout": [
       "import {FC, PropsWithChildren} from 'react'",
+      "import {Metadata} from 'next'",
+      "",
       "import {<FTName | pascalcase>LayoutProps} from './<FTName>-layout.types'",
       "",
       "import styles from './<FTName>-layout.module.css'",
       "import classNames from 'classnames'",
+      "",
+      "export const <FTName | pascalcase>LayoutMetadata: Metadata = {",
+      "  title: '<FTName | pascalcase>Layout Title',",
+      "  description: '<FTName | pascalcase>Layout Description',",
+      "}",
       "",
       "export const <FTName | pascalcase>Layout: FC<PropsWithChildren<<FTName | pascalcase>LayoutProps>> = ({children, className}) => {",
       "  const rootClassNames = classNames(className, styles.root)",
@@ -77,18 +88,16 @@
     "AppRouting: Page": [
       "import {<FTName | pascalcase>View} from '@views'",
       "",
+      "export {<FTName | pascalcase>ViewMetadata as metadata} from '@views'",
+      "",
       "export default <FTName | pascalcase>View",
       ""
     ],
 
     "AppRouting: Layout": [
       "import {<FTName | pascalcase>Layout} from '@layouts'",
-      "import {Metadata} from 'next'",
       "",
-      "export const metadata: Metadata = {",
-      "  title: '<FTName | pascalcase>',",
-      "  description: '<FTName | pascalcase> Description',",
-      "}",
+      "export {<FTName | pascalcase>LayoutMetadata as metadata} from '@layouts'",
       "",
       "export default <FTName | pascalcase>Layout",
       ""
