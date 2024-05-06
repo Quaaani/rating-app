@@ -19,8 +19,6 @@ export const ProductView: FC<ProductViewProps> = async ({params}) => {
     }),
   )
 
-  console.log('xxx product =>', product)
-
   if (!page) {
     notFound()
   }
