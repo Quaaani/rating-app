@@ -1,6 +1,6 @@
 {
   "css.validate": false,
-  "cSpell.words": ["callout", "Parens", "stylelint", "svgr", "vercel"],
+  "cSpell.words": ["callout", "Parens", "Photoshop", "stylelint", "svgr", "vercel"],
   "folderTemplates.fileTemplates": {
     "Component": [
       "import {FC} from 'react'",
