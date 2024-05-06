@@ -10,5 +10,13 @@ export const MainView: FC<MainViewProps> = async () => {
   }
   const data = await topPageApiModel.getMenu(JSON.stringify(body))
 
-  return <div className={styles.root}>MainView{data.length}</div>
+  return (
+    <div className={styles.root}>
+      <ul>
+        {data.map(item => (
+          <li key={item._id.secondCategory}>{item._id.secondCategory}</li>
+        ))}
+      </ul>
+    </div>
+  )
 }
