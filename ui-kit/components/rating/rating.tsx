@@ -3,7 +3,7 @@
 import {FC, useEffect, useState, KeyboardEvent} from 'react'
 import {RatingProps} from './rating.types'
 
-import StarIcon from '../../assets/icons/star.svg'
+import StarIcon from '@assets/icons/star.svg'
 
 import styles from './rating.module.css'
 import classNames from 'classnames'

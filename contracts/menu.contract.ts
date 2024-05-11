@@ -1,4 +1,4 @@
-import {TopLevelCategory} from './page.interface'
+import {CategoryLevel} from './enums'
 
 export interface PageItem {
   alias: string
@@ -11,13 +11,13 @@ export interface MenuItem {
   _id: {
     secondCategory: string
   }
-  isOpened?: boolean
   pages: PageItem[]
 }
 
+// TODO: Remove from this dir
 export interface FirstLevelMenuItem {
   route: string
   name: string
   icon: JSX.Element
-  id: TopLevelCategory
+  id: CategoryLevel
 }

@@ -23,10 +23,12 @@
       "@ui-kit": ["ui-kit/index"],
       "@views": ["views/index"],
       "@layouts": ["layouts/index"],
-      "@widgets": ["widgets/index"],
       "@api": ["api/index"],
+      "@constants": ["constants/index"],
+      "@context": ["context/index"],
+      "@contracts": ["contracts/index"],
       "@interfaces": ["interfaces/index"],
-      "@constants": ["constants/index"]
+      "@assets/icons/*": ["assets/icons/*"]
     },
     "strictPropertyInitialization": false
   },

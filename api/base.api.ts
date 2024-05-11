@@ -1,4 +1,4 @@
-import {requestConfig} from './constants'
+import {requestConfig} from '@constants'
 
 export class BaseApiModel {
   // TODO: Response type

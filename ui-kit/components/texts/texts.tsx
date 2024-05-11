@@ -10,11 +10,12 @@ import {getObjectKeys} from '@utils'
 const textFontStyles: Record<TextFonts, string> = {
   [TextFonts.Heading]: styles.heading,
   [TextFonts.Heading2]: styles.heading2,
-  [TextFonts.Heading3]: styles.heading3,
-  [TextFonts.Body]: styles.body,
-  [TextFonts.Light]: styles.light,
-  [TextFonts.SemiBold]: styles.semiBold,
-  [TextFonts.Bold]: styles.bold,
+  [TextFonts.Heading2Bold]: styles.heading2Bold,
+  [TextFonts.Paragraph]: styles.paragraph,
+  [TextFonts.Paragraph2]: styles.paragraph2,
+  [TextFonts.Paragraph2Bold]: styles.paragraph2Bold,
+  [TextFonts.Small]: styles.small,
+  [TextFonts.SmallBold]: styles.smallBold,
 }
 
 const generateTextComponents = (): TextsExtensions => {

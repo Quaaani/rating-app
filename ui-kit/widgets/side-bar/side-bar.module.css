@@ -1,0 +1,68 @@
+.root {
+}
+
+.firstLevelMenu {
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 12px;
+  align-items: center;
+
+  margin: 10px 0;
+}
+
+.firstLevelMenu:first-child,
+.firstLevelMenu:last-child {
+  margin: 0;
+}
+
+.secondLevelMenuWrapper {
+  margin-left: 11px;
+  padding: 10px 0;
+  border-left: 1px solid var(--gray);
+}
+
+.secondLevelMenu {
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: auto;
+
+  margin-bottom: 12px;
+  margin-left: 25px;
+
+  text-transform: uppercase;
+}
+
+.thirdLevelMenuWrapper {
+  margin: 10px 0;
+  margin-left: 28px;
+  padding: 10px 0;
+  border-left: 1px solid var(--gray);
+}
+
+.thirdLevelMenu {
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: auto;
+
+  margin-bottom: 12px;
+  margin-left: 25px;
+}
+
+.secondLevelMenu:last-child,
+.thirdLevelMenu:last-child {
+  margin-bottom: 0;
+}
+
+.firstLevelMenu:hover svg {
+  fill: var(--primary);
+}
+
+.firstLevelMenu:hover,
+.secondLevelMenu:hover,
+.thirdLevelMenu:hover {
+  color: var(--primary);
+}

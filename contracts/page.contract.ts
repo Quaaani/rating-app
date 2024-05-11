@@ -1,9 +1,4 @@
-export enum TopLevelCategory {
-  Courses,
-  Services,
-  Books,
-  Products,
-}
+import {CategoryLevel} from './enums'
 
 export interface TopPageAdvantage {
   _id: string
@@ -31,7 +26,7 @@ export interface TopPageModel {
   tagsTitle: string
   metaTitle: string
   metaDescription: string
-  firstCategory: TopLevelCategory
+  firstCategory: CategoryLevel
   advantages?: TopPageAdvantage[]
   createdAt: Date
   updatedAt: Date
