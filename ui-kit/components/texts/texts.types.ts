@@ -5,11 +5,12 @@ export interface TextsProps extends DetailedHTMLProps<HTMLAttributes<HTMLParagra
 export enum TextFonts {
   Heading = 'Heading',
   Heading2 = 'Heading2',
-  Heading3 = 'Heading3',
-  Body = 'Body',
-  Light = 'Light',
-  SemiBold = 'SemiBold',
-  Bold = 'Bold',
+  Heading2Bold = 'Heading2Bold',
+  Paragraph = 'Paragraph',
+  Paragraph2 = 'Paragraph2',
+  Paragraph2Bold = 'Paragraph2Bold',
+  Small = 'Small',
+  SmallBold = 'SmallBold',
 }
 
 export type TextsExtensions = Record<TextFonts, FC<PropsWithChildren<TextsProps>>>

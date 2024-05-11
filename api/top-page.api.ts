@@ -1,6 +1,6 @@
-import {MenuItem, TopPageModel} from '@interfaces'
-import {API_ROUTES} from './constants'
+import {API_ROUTES} from '@constants'
 import {BaseApiModel} from './base.api'
+import {MenuItem, TopPageModel} from '@contracts'
 
 class TopPageApiModel extends BaseApiModel {
   // TODO: Add Error handling

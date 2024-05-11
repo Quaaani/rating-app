@@ -1,6 +1,6 @@
-import {ProductModel} from '@interfaces'
 import {BaseApiModel} from './base.api'
-import {API_ROUTES} from './constants'
+import {API_ROUTES} from '@constants'
+import {ProductModel} from '@contracts'
 
 class ProductApiModel extends BaseApiModel {
   public async getProduct(body: string): Promise<ProductModel[]> {

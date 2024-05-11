@@ -5,37 +5,43 @@
 }
 
 .heading2 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 29.96px;
 }
 
-.heading3 {
+.heading2Bold {
   font-size: 20px;
-  font-weight: 600;
-  line-height: 27.24px;
+  font-weight: 700;
+  line-height: 29.96px;
 }
 
-.body {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-}
-
-.light {
-  font-size: 12px;
+.paragraph {
+  font-size: 18px;
   font-weight: 500;
-  line-height: 16.34px;
+  line-height: 24.52px;
 }
 
-.semiBold {
+.paragraph2 {
   font-size: 16px;
   font-weight: 500;
   line-height: 21.79px;
 }
 
-.bold {
+.paragraph2Bold {
   font-size: 16px;
   font-weight: 700;
   line-height: 21.79px;
+}
+
+.small {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 16.34px;
+}
+
+.smallBold {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.34px;
 }

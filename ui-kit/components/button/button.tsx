@@ -1,7 +1,7 @@
 import {FC, PropsWithChildren} from 'react'
 import {ButtonProps} from './button.types'
 
-import ArrowIcon from '../../assets/icons/arrow.svg'
+import ArrowIcon from '@assets/icons/arrow.svg'
 
 import styles from './button.module.css'
 import classNames from 'classnames'
