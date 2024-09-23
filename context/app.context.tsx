@@ -13,7 +13,7 @@ const defaultAppContextData: AppContextData = {
   menuItems: [],
 }
 
-const AppContext = createContext<AppContextData>(defaultAppContextData)
+export const AppContext = createContext<AppContextData>(defaultAppContextData)
 
 export const AppContextProvider: FC<PropsWithChildren<AppContextData>> = ({children, menuItems}) => {
   const [contextMenu, setContextMenu] = useState<SideBarItem[]>(menuItems)

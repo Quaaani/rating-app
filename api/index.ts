@@ -1,2 +1,2 @@
-export * from './top-page.api'
-export * from './product.api'
+export * from './top-page-api'
+export * from './product-api'

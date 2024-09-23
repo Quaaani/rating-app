@@ -1,6 +1,7 @@
 import {categoryIcons, categoryLabels} from '@constants'
 import {MenuItem} from '@contracts'
 import {SideBarItem} from '@interfaces'
+import {toLowerCase} from '@utils'
 
 export const transformMenuToSideBarMenuItems = (menu: MenuItem[][]): SideBarItem[] => {
   return menu.map((firstLevelMenu, index) => {
@@ -25,6 +26,7 @@ export const transformMenuToSideBarMenuItems = (menu: MenuItem[][]): SideBarItem
       id: categoryLabels[index],
       label: categoryLabels[index],
       icon: categoryIcons[index],
+      route: toLowerCase(categoryLabels)[index],
       isOpen: false,
       children: firstLevelChildren,
     }

@@ -1,5 +1,5 @@
 import {API_ROUTES} from '@constants'
-import {BaseApiModel} from './base.api'
+import {BaseApiModel} from '../base.api'
 import {MenuItem, TopPageModel} from '@contracts'
 
 class TopPageApiModel extends BaseApiModel {
