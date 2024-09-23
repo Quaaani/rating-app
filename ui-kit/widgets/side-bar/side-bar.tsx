@@ -8,19 +8,22 @@ import classNames from 'classnames'
 import {Texts} from '../../components'
 import {useAppContext} from '@context'
 import {SideBarItem} from '@interfaces'
+import Link from 'next/link'
 
 export const SideBar: FC<SideBarProps> = ({className}) => {
   const rootClassNames = classNames(className, styles.root)
 
   const {menuItems, toggleMenu} = useAppContext()
 
-  const renderThirdLevel = (thirdLevelItems: SideBarItem[]) => {
+  const renderThirdLevel = (thirdLevelItems: SideBarItem[], route: string) => {
     return (
       <div className={styles.thirdLevelMenuWrapper}>
         {thirdLevelItems.map(thirdLevelItem => {
           return (
             <div key={thirdLevelItem.id} className={styles.thirdLevelMenu}>
-              <Texts.SmallBold>{thirdLevelItem.label}</Texts.SmallBold>
+              <Link href={`/${route}/${thirdLevelItem.alias}`}>
+                <Texts.SmallBold>{thirdLevelItem.label}</Texts.SmallBold>
+              </Link>
             </div>
           )
         })}
@@ -28,7 +31,7 @@ export const SideBar: FC<SideBarProps> = ({className}) => {
     )
   }
 
-  const renderSecondLevel = (secondLevelItems: SideBarItem[]) => {
+  const renderSecondLevel = (secondLevelItems: SideBarItem[], route: string) => {
     return (
       <div className={styles.secondLevelMenuWrapper}>
         {secondLevelItems.map(secondLevelItem => {
@@ -37,7 +40,7 @@ export const SideBar: FC<SideBarProps> = ({className}) => {
               <div className={styles.secondLevelMenu} onClick={() => toggleMenu?.(secondLevelItem.id)}>
                 <Texts.Small>{secondLevelItem.label}</Texts.Small>
               </div>
-              {secondLevelItem.isOpen ? renderThirdLevel(secondLevelItem.children) : undefined}
+              {secondLevelItem.isOpen ? renderThirdLevel(secondLevelItem.children, route) : undefined}
             </Fragment>
           )
         })}
@@ -51,7 +54,9 @@ export const SideBar: FC<SideBarProps> = ({className}) => {
         <span>{firstLevelItem.icon}</span>
         <Texts.Paragraph2>{firstLevelItem.label}</Texts.Paragraph2>
       </div>
-      {firstLevelItem.isOpen && firstLevelItem.children.length ? renderSecondLevel(firstLevelItem.children) : undefined}
+      {firstLevelItem.isOpen && firstLevelItem.children.length
+        ? renderSecondLevel(firstLevelItem.children, firstLevelItem.route!)
+        : undefined}
     </Fragment>
   ))
 

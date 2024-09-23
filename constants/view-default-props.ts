@@ -1,5 +1,6 @@
 interface Params {
-  slug: string
+  type: string
+  alias: string
 }
 
 interface SearchParams {
@@ -7,6 +8,6 @@ interface SearchParams {
 }
 
 export interface ViewDefaultProps {
-  params?: Params
+  params: Params
   searchParams?: SearchParams
 }

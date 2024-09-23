@@ -1,4 +1,4 @@
-import {BaseApiModel} from './base.api'
+import {BaseApiModel} from '../base.api'
 import {API_ROUTES} from '@constants'
 import {ProductModel} from '@contracts'
 
